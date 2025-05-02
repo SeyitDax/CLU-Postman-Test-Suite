@@ -1,0 +1,11 @@
+# Ignore sensitive Postman env files
+*.env.json
+
+# Ignore VS Code and build files
+.vscode/
+bin/
+obj/
+
+# Ignore user secrets (if used)
+secrets.json
+appsettings.Development.json

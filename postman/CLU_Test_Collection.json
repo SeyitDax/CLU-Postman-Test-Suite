@@ -1,0 +1,52 @@
+{
+	"info": {
+		"_postman_id": "fee0aa0c-cb29-4395-adf2-279141b01904",
+		"name": "CLUNameRec",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43495346",
+		"_collection_link": "https://seyitahmet-387260.postman.co/workspace/Seyit-Ahmet's-Workspace~dd6002f1-98d3-4841-8864-fa9003e4599c/collection/43495346-fee0aa0c-cb29-4395-adf2-279141b01904?action=share&source=collection_link&creator=43495346"
+	},
+	"item": [
+		{
+			"name": "Analyze Conversation (NameRecBot)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "{{CLU_API_KEY}}",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"kind\": \"Conversation\",\r\n  \"analysisInput\": {\r\n    \"conversationItem\": {\r\n      \"text\": \"My name is Alex\",\r\n      \"id\": \"1\",\r\n      \"participantId\": \"User\"\r\n    }\r\n  },\r\n  \"parameters\": {\r\n    \"projectName\": \"NameRecBot\",\r\n    \"deploymentName\": \"Production002\"\r\n  }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{CLU_ENDPOINT}}",
+					"path": [
+						"language",
+						"analyze-conversations"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "2024-11-15-preview"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
