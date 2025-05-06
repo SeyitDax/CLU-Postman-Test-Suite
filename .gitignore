@@ -9,3 +9,7 @@ obj/
 # Ignore user secrets (if used)
 secrets.json
 appsettings.Development.json
+
+*.env
+*.postman_environment.json
+*.postman_globals.json
